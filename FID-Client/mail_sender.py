@@ -8,12 +8,12 @@ def sender(username: str, to_address: str, passwd: str):
     connection = smtplib.SMTP("smtp.gmail.com", 587)
     connection.set_debuglevel(True) # enable debug output
     connection.starttls()
-    connection.login('kikuchi.yasuaki0227@gmail.com', 'jyhyjfoafznjmzqr')
+    connection.login('Email', '???')
 
     # メッセージコンテナの作成
     msg = MIMEMultipart("alternative") # MIME type は multipart/alternative
     msg["Subject"] = "【FaceID】メール認証（" + username + "様）" # メール表題
-    msg["From"] = formataddr(("FaceID System", "kikuchi.yasuaki0227@gmail.com"))
+    msg["From"] = formataddr(("FaceID System", "Email"))
     msg["To"] = to_address # 送信先のメールアドレスの設定
 
     # 平文でのメッセージ本体の作成
@@ -61,7 +61,7 @@ def sender(username: str, to_address: str, passwd: str):
     msg.attach(MIMEText(text, "plain"))
     msg.attach(MIMEText(html, "html"))
     
-    connection.sendmail("kikuchi.yasuaki0227@gmail.com", to_address, msg.as_string())
+    connection.sendmail("Email", to_address, msg.as_string())
 
     connection.quit()
 
@@ -70,12 +70,12 @@ def senderRadius(uuidstr: str, username: str, to_address: str):
     connection = smtplib.SMTP("smtp.gmail.com", 587)
     connection.set_debuglevel(True) # enable debug output
     connection.starttls()
-    connection.login('kikuchi.yasuaki0227@gmail.com', 'jyhyjfoafznjmzqr')
+    connection.login('Email', '???')
 
     # メッセージコンテナの作成
     msg = MIMEMultipart("alternative") # MIME type は multipart/alternative
     msg["Subject"] = "【FaceID】RADIUS 認証（" + username + "様）" # メール表題
-    msg["From"] = formataddr(("FaceID System", "kikuchi.yasuaki0227@gmail.com")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
+    msg["From"] = formataddr(("FaceID System", "Email")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
     msg["To"] = to_address # 送信先のメールアドレスの設定
 
     url = 'https://172.20.0.1/in/' + uuidstr
@@ -135,7 +135,7 @@ def senderRadius(uuidstr: str, username: str, to_address: str):
     msg.attach(MIMEText(text, "plain"))
     msg.attach(MIMEText(html, "html"))
     
-    connection.sendmail("kikuchi.yasuaki0227@gmail.com", to_address, msg.as_string())
+    connection.sendmail("Email", to_address, msg.as_string())
 
     connection.quit()
 
@@ -144,12 +144,12 @@ def senderRadiusHarry(uuidstr: str, username: str, to_address: str):
     connection = smtplib.SMTP("smtp.gmail.com", 587)
     connection.set_debuglevel(True) # enable debug output
     connection.starttls()
-    connection.login('kikuchi.yasuaki0227@gmail.com', 'jyhyjfoafznjmzqr')
+    connection.login('Email', '???')
 
     # メッセージコンテナの作成
     msg = MIMEMultipart("alternative") # MIME type は multipart/alternative
     msg["Subject"] = "【FaceID】* 早急 * RADIUS 認証（" + username + "様）" # メール表題
-    msg["From"] = formataddr(("FaceID System", "kikuchi.yasuaki0227@gmail.com")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
+    msg["From"] = formataddr(("FaceID System", "Email")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
     msg["To"] = to_address # 送信先のメールアドレスの設定
 
     url = 'https://172.20.0.1/in/' + uuidstr
@@ -211,7 +211,7 @@ def senderRadiusHarry(uuidstr: str, username: str, to_address: str):
     msg.attach(MIMEText(text, "plain"))
     msg.attach(MIMEText(html, "html"))
     
-    connection.sendmail("kikuchi.yasuaki0227@gmail.com", to_address, msg.as_string())
+    connection.sendmail("Email", to_address, msg.as_string())
 
     connection.quit()
 
@@ -220,12 +220,12 @@ def senderResult(username: str, to_address: str):
     connection = smtplib.SMTP("smtp.gmail.com", 587)
     connection.set_debuglevel(True) # enable debug output
     connection.starttls()
-    connection.login('kikuchi.yasuaki0227@gmail.com', 'jyhyjfoafznjmzqr')
+    connection.login('Email', '???')
 
     # メッセージコンテナの作成
     msg = MIMEMultipart("alternative") # MIME type は multipart/alternative
     msg["Subject"] = "【FaceID】すべての認証完了（" + username + "様）" # メール表題
-    msg["From"] = formataddr(("FaceID System", "kikuchi.yasuaki0227@gmail.com")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
+    msg["From"] = formataddr(("FaceID System", "Email")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
     msg["To"] = to_address # 送信先のメールアドレスの設定
 
     # 平文でのメッセージ本体の作成
@@ -272,7 +272,7 @@ def senderResult(username: str, to_address: str):
     msg.attach(MIMEText(text, "plain"))
     msg.attach(MIMEText(html, "html"))
     
-    connection.sendmail("kikuchi.yasuaki0227@gmail.com", to_address, msg.as_string())
+    connection.sendmail("Email", to_address, msg.as_string())
 
     connection.quit()
 
@@ -281,12 +281,12 @@ def senderOut(uuidstr: str, username: str, to_address: str):
     connection = smtplib.SMTP("smtp.gmail.com", 587)
     connection.set_debuglevel(True) # enable debug output
     connection.starttls()
-    connection.login('kikuchi.yasuaki0227@gmail.com', 'jyhyjfoafznjmzqr')
+    connection.login('Email', '???')
 
     # メッセージコンテナの作成
     msg = MIMEMultipart("alternative") # MIME type は multipart/alternative
     msg["Subject"] = "【FaceID】途中入退出・退出について（" + username + "様）" # メール表題
-    msg["From"] = formataddr(("FaceID System", "kikuchi.yasuaki0227@gmail.com")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
+    msg["From"] = formataddr(("FaceID System", "Email")) # 送信元の名前とメールアドレスの設定。メールアドレス直接指定でも可。
     msg["To"] = to_address # 送信先のメールアドレスの設定
 
     mid_in_url = 'https://172.20.0.1/mid-in/' + uuidstr
@@ -361,6 +361,6 @@ def senderOut(uuidstr: str, username: str, to_address: str):
     msg.attach(MIMEText(text, "plain"))
     msg.attach(MIMEText(html, "html"))
     
-    connection.sendmail("kikuchi.yasuaki0227@gmail.com", to_address, msg.as_string())
+    connection.sendmail("Email", to_address, msg.as_string())
 
     connection.quit()
