@@ -7,8 +7,8 @@ import base64
 
 # APIの基本設定
 url = 'https://api.switch-bot.com'
-token = '6111becc84886a39aadfa6eae686d19f206bf5194b1ffaea6cd12171d44dfdfc30f186371294cd55054c9887145b0bd1'  # SwitchBotのAPIトークン
-secret = 'dd8eb53d57bdf10876f483fa5be71581'  # SwitchBotのクライアントシークレット
+token = '???'  # SwitchBotのAPIトークン
+secret = '???'  # SwitchBotのクライアントシークレット
 
 # SwitchBotに登録されているデバイスの一覧を取得する関数
 def get_device_info():
